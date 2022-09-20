@@ -21,7 +21,7 @@ spec:
           ports:
             - containerPort: {{ .Values.port }}
           env:
-            # TODO: Try to create several using URLS and MAIN, but I'd need another model
+            # TODO: Try to create several using URLS and URLS_PRIMARY_NAME, but I'd need another model
             - name: URL
               value: /{{.Values.rootApiPath}}/{{ .Values.main.name }}/{{ .Values.main.file }}
           volumeMounts:
